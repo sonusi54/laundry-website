@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Grace Laundry Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background-image: url('images/hero-background.jpg'); /* Ensure this image exists in the images folder */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        .cta-button {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .about-us, .services, .how-it-works, .testimonials, .pricing, .contact-us, .footer {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .about-us .content, .contact-us .contact-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .about-us img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px;
+            width: 100%;
+            max-width: 500px; /* Adjust this value as needed */
+        }
+
+        .contact-us img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px;
+        }
+
+        .services .service-items, .how-it-works .steps, .testimonials .testimonial-items, .pricing .price-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service-item, .step, .testimonial-item, .price-item {
+            max-width: 300px;
+            text-align: center; /* Center the text */
+        }
+
+        .service-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* Add some styling to the images */
+            margin-bottom: 10px; /* Add some space between the image and the text */
+        }
+
+        .step img {
+            width: 100%;
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Cover the area without stretching */
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin: 10px 0 5px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contact-form button {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .footer a {
+            color: #ff4081;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .about-us .content, .contact-us .contact-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-us img, .contact-us img {
+                margin: 0;
+                max-width: 90%;
+            }
+
+            .services .service-items, .how-it-works .steps, .testimonials .testimonial-items, .pricing .price-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-item, .step, .testimonial-item, .price-item {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .cta-button {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+
+            .about-us, .services, .how-it-works, .testimonials, .pricing, .contact-us, .footer {
+                padding: 40px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Divine Grace Laundry Services at Your Doorstep</h1>
+            <p>Experience the convenience of clean, fresh laundry with our top-notch services.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-us">
+        <div class="content">
+            <img src="img\THE HOME EDIT ® (@thehomeedit) • Instagram photos….jpg" alt="About Us">
+            <div class="text">
+                <h2>About Us</h2>
+                <p>At Divine Grace Laundry Services, we pride ourselves on providing top-quality laundry services with a personal touch. Our experienced team uses state-of-the-art equipment and eco-friendly products to ensure your clothes are perfectly cleaned and cared for.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-items">
+            <div class="service-item">
+                <img src="img\Girl Worker Holding a Laundry Service Clean Towels Stock Photo - Image of smiling, portrait_ 75023142.jpg" alt="Wash & Fold">
+                <h3>Wash & Fold</h3>
+                <p>Let us handle your everyday laundry needs with our convenient wash and fold service.</p>
+            </div>
+            <div class="service-item">
+                <img src="img\Martha's Method for Folding a Fitted Sheet Will Help You Master This Tricky Task Once and for All.jpg" alt="Dry Cleaning">
+                <h3>Dry Cleaning</h3>
+                <p>Professional dry cleaning services for your delicate and high-quality garments.</p>
+            </div>
+            <div class="service-item">
+                <img src="img\Trucchi per stirare velocemente in estate - A Spasso con Bea.jpg" alt="Ironing">
+                <h3>Ironing</h3>
+                <p>Expert ironing services to keep your clothes looking sharp and wrinkle-free.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="img\Download premium image of Senior man working on a laptop by Teddy about coffee night, online news, elderly person working, working late, and old man using laptop 538970 (3).jpg" alt="Step 1">
+                <h3>Step 1: Schedule a Pickup</h3>
+                <p>Schedule a pickup online or through our app.</p>
+            </div>
+            <div class="step">
+                <img src="img\People Donating Clothing To Charity Collection in Community Center Stock Image - Image of centre, people_ 153624303.jpg" alt="Step 2">
+                <h3>Step 2: We Collect</h3>
+                <p>Our team will collect your laundry at a convenient time.</p>
+            </div>
+            <div class="step">
+                <img src="img\Laundry Service in Kansas.jpg" alt="Step 3">
+                <h3>Step 3: We Clean</h3>
+                <p>We clean your clothes with the utmost care.</p>
+            </div>
+            <div class="step">
+                <img src="img/-☆-.jpg" alt="Step 4">
+                <h3>Step 4: We Deliver</h3>
+                <p>Fresh, clean laundry is delivered to your doorstep.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-items">
+            <div class="testimonial-item">
+                <img src="img\AI Career Essentials - ALX Africa.jpg" alt="Customer 1" style="margin-right: 1em;">
+                <p>"The best laundry service I've ever used! Fast, reliable, and my clothes look amazing." - Jane D.</p>
+            </div>
+            <div class="testimonial-item">
+                <img src="img\How Tony Robbins Sets Goals 2356.jpg" alt="Customer 2">
+                <p>"Great service and friendly staff. Highly recommend!" - John S.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>Pricing</h2>
+        <div class="price-list">
+            <div class="price-item">
+                <h3>Wash & Fold</h3>
+                <p>$1.50 per pound</p>
+            </div>
+            <div class="price-item">
+                <h3>Dry Cleaning</h3>
+                <p>From $5 per item</p>
+            </div>
+            <div class="price-item">
+                <h3>Ironing</h3>
+                <p>$2 per item</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-us">
+        <h2>Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-details">
+                <h2 style="text-align: center;">Get In Touch</h2>
+                <p>Phone: <a href="tel:09037765197">09037765197</a>, <a href="tel:07055519706">07055519706</a></p>
+                <p>Email: <a href="mailto:vanessaalabi5@gmail.com">vanessaalabi5@gmail.com</a></p>
+                <form class="contact-form">
+                    <div class="mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Divine Grace Laundry Services. All rights reserved.</p>
+        <p>
+            <a href="#about">About Us</a> |
+            <a href="#services">Services</a> |
+            <a href="#contact">Contact Us</a>
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
